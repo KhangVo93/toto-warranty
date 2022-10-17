@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST</title>
+    <link rel="stylesheet" href="test.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div style="position: relative; min-height: 500px">
+      <div class="background-header right"></div>
+      <div class="background-header left"></div>
+    </div>
+    <div style="position: absolute; top: 10%; left: 10%">
+      <p class="text-warranty text-banner text-center">
+        Warranty service center
+      </p>
+      <div style="max-width: 630px">
+        <h6 class="text-warranty text-title d-none d-sm-block">
+          CLEAN SYNERGY technologies offer a sustainable way to maintain
+          sanitary conditions inside your toilet. Since waste does not
+          accumulate and create stains, there is less need for manual cleaning
+          with detergents.
+        </h6>
+      </div>
+    </div>
+    <br />
+    <br />
+    <!-- MENU -->
+    <div class="container text-center d-flex justify-content-center">
+      <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
+        <li class="nav-item d-flex" role="presentation">
+          <a
+            class="active text-warranty text-menu menu"
+            id="ex1-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-1"
+            role="tab"
+            aria-controls="ex1-tabs-1"
+            aria-selected="true"
+            >ACTIVATE WARRANTY</a
+          >
+        </li>
+        <li class="nav-item d-flex" role="presentation">
+          <a
+            class="text-warranty text-menu menu"
+            id="ex1-tab-2"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-2"
+            role="tab"
+            aria-controls="ex1-tabs-2"
+            aria-selected="false"
+            >CHECK WARRANTY</a
+          >
+        </li>
+      </ul>
+    </div>
+    <br />
+    <br />
+    <!-- Please enter email -->
+    <div class="container text-center">
+      <h6 class="text-warranty text-title">
+        Please
+        <span style="color: #3088ce"
+          >enter your Serial and fill information
+        </span>
+        or
+        <span style="color: #3088ce">Scan QR code</span> to check for your
+        warranty of activated product.
+      </h6>
+      <h6 class="text-warranty text-title" style="text-decoration: underline">
+        Where to find Serial / QR?
+      </h6>
+    </div>
+    <br />
+    <!-- CONTENT -->
+    <div class="tab-content" id="ex1-content">
+      <!-- ACTIVATE WARRANTY-->
+      <div
+        class="tab-pane fade show active"
+        id="ex1-tabs-1"
+        role="tabpanel"
+        aria-labelledby="ex1-tab-1"
+      >
+        <!-- Container serial -->
+        <div class="container-fluid serial d-flex justify-content-center">
+          <div>
+            <div
+              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+            >
+              <div style="padding: 3px 10px">
+                <h5 class="text-warranty text-serial">
+                  Enter your serial number
+                </h5>
+              </div>
+              <div class="">
+                <input
+                  class="input-serial"
+                  type="text"
+                  placeholder="Your serial"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="row d-flex justify-content-center">
+              <h5 class="text-warranty text-serial text-center">
+                Or Scan QR on your product
+              </h5>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <!-- Fill your warranty information -->
+        <div class="container">
+          <h4 class="text-center text-warranty text-menu" style="color: #000">
+            FILL YOUR WARRANTY INFORMATION
+          </h4>
+          <br />
+          <br />
+          <!-- Customer information-->
+          <h6 class="text-left text-warranty text-title">
+            <span>
+              <img src="assets/images/customer.png" alt="customer"
+            /></span>
+            Customer Information
+          </h6>
+          <br />
+          <div class="row">
+            <div class="col-lg-4">
+              <input
+                class="input-infomation"
+                type="text"
+                placeholder="Full name"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                class="input-infomation"
+                type="text"
+                placeholder="Phone number"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                class="input-infomation"
+                type="text"
+                placeholder="Email address"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-lg-4">
+              <select class="input-infomation">
+                <option>Choose your province / city</option>
+                <option>Text 1</option>
+                <option>Text 2</option>
+                <option>Text 3</option>
+                <option>Text 4</option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <select class="input-infomation">
+                <option>Choose your district</option>
+                <option>Text 1</option>
+                <option>Text 2</option>
+                <option>Text 3</option>
+                <option>Text 4</option>
+              </select>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-lg-8">
+              <input
+                class="input-infomation"
+                type="text"
+                placeholder="Enter your house number / street name"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                id="upload-photo"
+                type="file"
+                class="inputfile"
+                data-multiple-caption="{count} files selected"
+                multiple
+                style="opacity: 0; position: absolute; z-index: -1"
+              />
+              <label
+                id="labelInput"
+                for="upload-photo"
+                style="
+                  cursor: pointer;
+                  border: 1px solid black;
+                  text-align: center;
+                  width: 100%;
+                "
+                class="button-attach"
+                >Attach your bill
+                <img
+                  src="assets/images/attach-bill.png"
+                  alt="attach-bill"
+                  style="width: 14px; height: 19px; margin: 0 5px"
+                />
+              </label>
+            </div>
+          </div>
+          <br />
+          <h6 class="text-left text-warranty text-title">
+            <span> <img src="assets/images/store.png" alt="store" /></span>
+            Store where you bought
+          </h6>
+
+          <br />
+          <!-- Store where you bought -->
+          <div class="row">
+            <div class="col-lg-4">
+              <input
+                class="input-infomation"
+                type="text"
+                placeholder="Store name"
+              />
+            </div>
+            <div class="col-lg-4">
+              <select class="input-infomation">
+                <option>Choose store's province / city</option>
+                <option>Text 1</option>
+                <option>Text 2</option>
+                <option>Text 3</option>
+                <option>Text 4</option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <select class="input-infomation">
+                <option>Choose store's district</option>
+                <option>Text 1</option>
+                <option>Text 2</option>
+                <option>Text 3</option>
+                <option>Text 4</option>
+              </select>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-lg-12">
+              <textarea
+                class="input-infomation"
+                style="height: 120px"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="text-center d-flex flex-row justify-content-center">
+            <input
+              type="checkbox"
+              id="vehicle1"
+              name="vehicle1"
+              value="Bike"
+              style="
+                width: 18px;
+                height: 18px;
+                margin-top: 5px;
+                margin-right: 10px;
+              "
+            />
+            <label for="vehicle1" class="text-warranty text-title"
+              >I agree with
+              <span style="text-decoration: underline">Warranty Terms</span>
+              from TOTO
+            </label>
+          </div>
+          <br />
+        </div>
+        <!-- End fill information -->
+        <div class="container-fluid d-none d-sm-block">
+          <div>
+            <div class="d-flex">
+              <div class="line"></div>
+              <input
+                type="text"
+                readonly
+                value="ACTIVATE WARRANTY"
+                class="button-attach"
+                style="margin: 15px 15px 0px; text-align: center"
+              />
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <!-- CHECK WARRANTY-->
+      <div
+        class="tab-pane fade"
+        id="ex1-tabs-2"
+        role="tabpanel"
+        aria-labelledby="ex1-tab-2"
+      >
+        <!-- Container serial -->
+        <div class="container-fluid serial d-flex justify-content-center">
+          <div>
+            <div
+              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+            >
+              <div style="padding: 3px 15px">
+                <h5 class="text-warranty text-serial">
+                  Enter your serial number
+                </h5>
+              </div>
+              <div class="">
+                <input
+                  class="input-serial"
+                  type="text"
+                  placeholder="Your serial"
+                />
+              </div>
+            </div>
+            <br />
+            <div
+              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+            >
+              <div style="padding: 3px 15px; padding-right: 35px">
+                <h5 class="text-warranty text-serial">Or your phone number</h5>
+              </div>
+              <div class="">
+                <input
+                  class="input-serial"
+                  type="email"
+                  placeholder="Your phone number"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="row d-flex justify-content-center">
+              <h5 class="text-warranty text-serial text-center">
+                Or Scan QR on your product
+              </h5>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <!-- End fill information -->
+        <div class="container-fluid d-none d-sm-block">
+          <div>
+            <div class="d-flex">
+              <div class="line"></div>
+              <input
+                type="text"
+                readonly
+                value="CHECK WARRANTY"
+                class="button-attach"
+                style="margin: 15px 15px 0px; text-align: center"
+              />
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <!-- SERVICE -->
+      <div
+        style="position: relative; min-height: 670px"
+        class="d-none d-sm-block"
+      >
+        <div class="background-service bottom"></div>
+        <div class="background-service top"></div>
+        <div style="position: absolute; top: 140px; left: 401px">
+          <div class="d-flex">
+            <div class="text-center">
+              <input
+                type="submit"
+                value="Call service"
+                class="button-attach"
+                style="background-color: #000; color: #fff"
+              />
+              <br />
+              <br />
+              <h6 class="text-warranty text-title">Hotline: 38229520</h6>
+              <br />
+              <h6 class="text-warranty text-title">
+                Monday - Friday | 08:00 - 17:00
+              </h6>
+            </div>
+            <div class="p-4 m-2 d-flex align-items-center">
+              <h6 class="text-warranty text-title">Or</h6>
+            </div>
+            <div class="">
+              <input
+                type="submit"
+                value="Live chat on Messenger"
+                class="button-attach"
+              />
+              <br />
+              <br />
+              <h6 class="text-warranty text-title">
+                Monday - Friday | 08:00 - 17:00
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Questions -->
+      <br />
+      <br />
+      <br />
+      <div class="container d-none d-sm-block">
+        <h4 class="text-warranty text-menu text-center" style="color: #000">
+          FREQUENTLY ASKED QUESTIONS
+        </h4>
+        <br />
+        <!--Question 1-->
+        <div class="input-infomation" style="display: inline-block">
+          <div class="panel panel-default">
+            <div
+              class="panel-heading d-flex justify-content-between"
+              data-target="#collapse1"
+              data-toggle="collapse"
+            >
+              <h4 class="panel-title">
+                Why do I have to activate when just buying product ?
+              </h4>
+              <div class="off">
+                <img
+                  id="collapsedown"
+                  src="assets/images/collapse-down.png"
+                  alt="down"
+                  class="collapse-question"
+                />
+                <img
+                  id="collapseup"
+                  src="assets/images/collapse-up.png"
+                  alt="up"
+                  class="collapse-question"
+                />
+              </div>
+            </div>
+            <br />
+            <div
+              id="collapse1"
+              class="collapse"
+              style="border-bottom: 1px solid #000"
+            >
+              <ul>
+                <li class="text-warranty text-title">
+                  Actively confirm whether the product is genuine or not
+                </li>
+                <li class="text-warranty text-title">
+                  An important basis for Minh Long to have information and
+                  support customers in the best way
+                </li>
+                <li class="text-warranty text-title">
+                  Customers enjoy full product warranty benefits, helping to
+                  feel more secure during use.
+                </li>
+              </ul>
+            </div>
+            <br />
+          </div>
+        </div>
+        <br />
+        <!--Question 2-->
+        <div class="input-infomation" style="display: inline-block">
+          <div class="panel panel-default">
+            <div
+              class="panel-heading d-flex justify-content-between"
+              data-target="#collapse2"
+              data-toggle="collapse"
+            >
+              <h4 class="panel-title">
+                Why do I have to activate when just buying product ?
+              </h4>
+              <div class="off">
+                <img
+                  id="collapsedown"
+                  src="assets/images/collapse-down.png"
+                  alt="down"
+                  class="collapse-question"
+                />
+                <img
+                  id="collapseup"
+                  src="assets/images/collapse-up.png"
+                  alt="up"
+                  class="collapse-question"
+                />
+              </div>
+            </div>
+            <br />
+            <div
+              id="collapse2"
+              class="panel-collapse collapse"
+              style="border-bottom: 1px solid #000"
+            >
+            <ul>
+              <li class="text-warranty text-title">
+                Actively confirm whether the product is genuine or not
+              </li>
+              <li class="text-warranty text-title">
+                An important basis for Minh Long to have information and
+                support customers in the best way
+              </li>
+              <li class="text-warranty text-title">
+                Customers enjoy full product warranty benefits, helping to
+                feel more secure during use.
+              </li>
+            </ul>
+            </div>
+            <br />
+          </div>
+        </div>
+        <br />
+        <!--Question 3-->
+        <div class="input-infomation" style="display: inline-block">
+          <div class="panel panel-default">
+            <div
+              class="panel-heading d-flex justify-content-between"
+              data-target="#collapse3"
+              data-toggle="collapse"
+            >
+              <h4 class="panel-title">
+                Why do I have to activate when just buying product ?
+              </h4>
+              <div class="off">
+                <img
+                  id="collapsedown"
+                  src="assets/images/collapse-down.png"
+                  alt="down"
+                  class="collapse-question"
+                />
+                <img
+                  id="collapseup"
+                  src="assets/images/collapse-up.png"
+                  alt="up"
+                  class="collapse-question"
+                />
+              </div>
+            </div>
+            <br />
+            <div
+              id="collapse3"
+              class="panel-collapse collapse"
+              style="border-bottom: 1px solid #000"
+            >
+            <ul>
+              <li class="text-warranty text-title">
+                Actively confirm whether the product is genuine or not
+              </li>
+              <li class="text-warranty text-title">
+                An important basis for Minh Long to have information and
+                support customers in the best way
+              </li>
+              <li class="text-warranty text-title">
+                Customers enjoy full product warranty benefits, helping to
+                feel more secure during use.
+              </li>
+            </ul>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="test.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
