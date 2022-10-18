@@ -186,9 +186,9 @@
 }
 
 #btn-scan-qr img {
-  height: 10em;
-  padding: 15px;
-  margin: 15px;
+  height: 1em;
+  padding: 3px;
+  margin: 4px;
   background: white;
 }
 
