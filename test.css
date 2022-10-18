@@ -199,3 +199,7 @@
   max-width: 700px;
   background-color: white;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
