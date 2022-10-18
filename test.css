@@ -132,6 +132,10 @@
 .on img:first-child {
   display: none;
 }
+body {
+  margin:0;
+  overflow-x:hidden;
+}
 @media only screen and (max-width: 600px) {
   .background-header.left {
     display: none;
@@ -198,8 +202,4 @@
   padding: 20px;
   max-width: 700px;
   background-color: white;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }

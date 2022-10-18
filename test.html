@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>TEST</title>
     <link rel="stylesheet" href="test.css" />
     <link
@@ -11,17 +14,17 @@
       rel="stylesheet"
     />
     <!-- Latest compiled and minified CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    /> -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
       rel="stylesheet"
     />
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
   </head>
-  <body style="overflow-x: hidden">
+  <body>
     <!-- Header -->
     <div style="position: relative; min-height: 500px">
       <div class="background-header right"></div>
@@ -338,11 +341,12 @@
             <div class="d-flex">
               <div class="line"></div>
               <input
-                type="text"
+                type="button"
                 readonly
                 value="ACTIVATE WARRANTY"
                 class="button-attach"
                 style="margin: 15px 15px 0px; text-align: center"
+                onclick="console.log('ACTIVATE WARRANTY')"
               />
               <div class="line"></div>
             </div>
@@ -408,11 +412,12 @@
             <div class="d-flex">
               <div class="line"></div>
               <input
-                type="text"
+                type="button"
                 readonly
                 value="CHECK WARRANTY"
                 class="button-attach"
                 style="margin: 15px 15px 0px; text-align: center"
+                onclick="console.log('CHECK WARRANTY')"
               />
               <div class="line"></div>
             </div>
@@ -627,6 +632,8 @@
       <br />
       <br />
     </div>
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       type="text/javascript"
