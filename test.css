@@ -6,8 +6,13 @@
 .tufts-blue {
   color: #3088ce;
 }
+
 .underline {
   text-decoration: underline;
+}
+
+span img {
+  margin-right: 15px;
 }
 
 .warranty .background-header-container {

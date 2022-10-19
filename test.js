@@ -2,7 +2,7 @@ $('[data-toggle="collapse"]').on("click", function () {
   if ($(this).attr("aria-expanded") == "true") {
     $(this).find(".on").add($(this).find(".off")).toggleClass("off on");
   } else {
-    $(this).find(".off").add($(this).find(".onn")).toggleClass("on off");
+    $(this).find(".off").add($(this).find(".on")).toggleClass("on off");
   }
 });
 
@@ -25,12 +25,12 @@ Array.prototype.forEach.call(inputs, function (input) {
     } else label.innerHTML = labelVal;
   });
 });
+
 if ($("body").width() < 600) {
   $("#fillInfor").removeClass("title").addClass("content");
 } else {
   $("#fillInfor").removeClass("content").addClass("title");
 }
-/////////////////////////////////////////////////////////
 
 var qrcode = window.qrcode;
 var video = document.createElement("video");
