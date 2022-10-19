@@ -10,7 +10,6 @@
 .underline {
   text-decoration: underline;
 }
-
 span img {
   margin-right: 15px;
 }
@@ -75,7 +74,9 @@ span img {
   padding: 0 15px;
   color: gray;
 }
-
+.nav.nav-tabs {
+  border: none;
+}
 .warranty .text-warranty.title:hover {
   text-decoration: none;
 }
@@ -117,6 +118,61 @@ span img {
   background-color: #f2f2f2;
   border: 1px solid #e0e0e0;
 }
+
+.placeholder-wrap-serial {
+  height: 39px;
+  position: relative;
+  background: #fff;
+}
+.placeholder-wrap {
+  height: 62px;
+  position: relative;
+  background: #fff;
+}
+.placeholder-wrap .placeholder,
+.placeholder-wrap-serial .placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #000;
+  margin-top: -0.5em;
+  line-height: 1em;
+  z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Poppins";
+}
+.placeholder-wrap-serial input,
+.placeholder-wrap input {
+  background-color: transparent;
+  border: 1px #999 solid;
+  height: 62px;
+  position: relative;
+  background-color: #f2f2f2;
+  border: 1px solid #e0e0e0;
+}
+.placeholder-wrap select:focus + .placeholder,
+.placeholder-wrap select[required]:valid + .placeholder,
+.placeholder-wrap select.not-empty + .placeholder,
+.placeholder-wrap-serial input:focus + .placeholder,
+.placeholder-wrap-serial input[required]:valid + .placeholder,
+.placeholder-wrap-serial input.not-empty + .placeholder,
+.placeholder-wrap input:focus + .placeholder,
+.placeholder-wrap input[required]:valid + .placeholder,
+.placeholder-wrap input.not-empty + .placeholder {
+  display: none;
+}
+
+.warranty .selectpicker {
+  height: 62px !important;
+  background-color: #f2f2f2;
+}
+.warranty .question {
+  width: 100%;
+  padding: 18px 15px;
+}
+
 .warranty textarea.input-infomation {
   height: 120px;
 }

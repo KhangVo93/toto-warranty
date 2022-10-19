@@ -14,13 +14,9 @@
       rel="stylesheet"
     />
     <!-- Latest compiled and minified CSS -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    /> -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
-      rel="stylesheet"
     />
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
   </head>
@@ -41,16 +37,14 @@
         </h6>
       </div>
     </div>
-    <br />
-    <br />
     <!-- MENU -->
-    <div class="container text-center d-flex justify-content-center">
-      <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
-        <li class="nav-item d-flex" role="presentation">
+    <div class="container text-center d-flex justify-content-center p-4">
+      <ul class="nav nav-tabs" id="ex1" role="tablist">
+        <li class="nav-item d-flex p-4" role="presentation">
           <a
             class="active text-warranty title menu"
             id="ex1-tab-1"
-            data-mdb-toggle="tab"
+            data-toggle="tab"
             href="#ex1-tabs-1"
             role="tab"
             aria-controls="ex1-tabs-1"
@@ -58,11 +52,11 @@
             >ACTIVATE WARRANTY</a
           >
         </li>
-        <li class="nav-item d-flex" role="presentation">
+        <li class="nav-item d-flex p-4" role="presentation">
           <a
             class="text-warranty title menu"
             id="ex1-tab-2"
-            data-mdb-toggle="tab"
+            data-toggle="tab"
             href="#ex1-tabs-2"
             role="tab"
             aria-controls="ex1-tabs-2"
@@ -72,10 +66,8 @@
         </li>
       </ul>
     </div>
-    <br />
-    <br />
-    <!-- Please enter email -->
-    <div class="container text-center">
+    <!-- Please enter serial -->
+    <div class="container text-center p-2">
       <h6 class="text-warranty content">
         Please
         <span class="tufts-blue">enter your Serial and fill information </span>
@@ -87,8 +79,6 @@
         Where to find Serial / QR?
       </h6>
     </div>
-    <br />
-
     <!-- CONTENT -->
     <div class="tab-content" id="ex1-content">
       <!-- ACTIVATE WARRANTY-->
@@ -104,22 +94,20 @@
         >
           <div>
             <div
-              class="d-flex align-content-center flex-wrap justify-content-start"
+              class="d-flex align-content-center flex-wrap justify-content-start pb-4"
             >
               <div>
                 <h5 class="text-warranty text-serial">
                   Enter your serial number
                 </h5>
               </div>
-              <div>
-                <input
-                  class="input-serial"
-                  type="text"
-                  placeholder="Your serial"
-                />
+              <div class="placeholder-wrap-serial">
+                <input class="input-serial" type="text" required />
+                <span class="placeholder">
+                  Your serial <b class="text-danger">*</b>
+                </span>
               </div>
             </div>
-            <br />
             <div class="row d-flex justify-content-center">
               <h5 class="text-warranty text-serial text-center">
                 Or Scan QR on your product
@@ -138,8 +126,6 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
         <!-- Popup Scan QR -->
         <div
           class="modal fade"
@@ -173,165 +159,271 @@
           </div>
         </div>
         <!-- Fill your warranty information -->
-        <div class="container">
-          <h4 id="fillInfor" class="text-center text-warranty title text-dark">
-            FILL YOUR WARRANTY INFORMATION
-          </h4>
-          <br />
-          <br />
-          <!-- Customer information-->
-          <h6 class="text-left text-warranty content">
-            <span>
-              <img src="assets/images/customer.png" alt="customer"
-            /></span>
-            Customer Information
-          </h6>
-          <br />
-          <div class="row">
-            <div class="col-lg-4">
-              <input
-                class="input-infomation"
-                type="text"
-                placeholder="Full name"
-              />
-            </div>
-            <div class="col-lg-4">
-              <input
-                class="input-infomation"
-                type="text"
-                placeholder="Phone number"
-              />
-            </div>
-            <div class="col-lg-4">
-              <input
-                class="input-infomation"
-                type="text"
-                placeholder="Email address"
-              />
-            </div>
-          </div>
-          <br />
-          <div class="row">
-            <div class="col-lg-4">
-              <select class="input-infomation">
-                <option>Choose your province / city</option>
-                <option>Text 1</option>
-                <option>Text 2</option>
-                <option>Text 3</option>
-                <option>Text 4</option>
-              </select>
-            </div>
-            <div class="col-lg-4">
-              <select class="input-infomation">
-                <option>Choose your district</option>
-                <option>Text 1</option>
-                <option>Text 2</option>
-                <option>Text 3</option>
-                <option>Text 4</option>
-              </select>
-            </div>
-          </div>
-          <br />
-          <div class="row">
-            <div class="col-lg-8">
-              <input
-                class="input-infomation"
-                type="text"
-                placeholder="Enter your house number / street name"
-              />
-            </div>
-            <div class="col-lg-4">
-              <input
-                id="upload-photo"
-                type="file"
-                class="inputfile"
-                data-multiple-caption="{count} files selected"
-                multiple
-              />
-              <label
-                id="labelInput"
-                for="upload-photo"
-                class="label-input-file button"
-                >Attach your bill
-                <img src="assets/images/attach-bill.png" alt="attach-bill" />
-              </label>
-            </div>
-          </div>
-          <br />
-          <h6 class="text-left text-warranty content">
-            <span> <img src="assets/images/store.png" alt="store" /></span>
-            Store where you bought
-          </h6>
 
-          <br />
-          <!-- Store where you bought -->
-          <div class="row">
-            <div class="col-lg-4">
-              <input
-                class="input-infomation"
-                type="text"
-                placeholder="Store name"
-              />
+        <form class="needs-validation" novalidate>
+          <div class="container pt-4">
+            <h4
+              id="fillInfor"
+              class="text-center text-warranty title text-dark"
+            >
+              FILL YOUR WARRANTY INFORMATION
+            </h4>
+
+            <!-- Customer information-->
+            <h6 class="text-left text-warranty content pb-4">
+              <span>
+                <img src="assets/images/customer.png" alt="customer"
+              /></span>
+              Customer Information
+            </h6>
+            <div class="row pb-4">
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <input
+                    class="form-control"
+                    id="validationCustom01"
+                    required
+                    pattern="[a-zA-Z][a-zA-Z ]{2,}"
+                    type="text"
+                  />
+                  <span class="placeholder">
+                    Full name <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <input
+                    class="input-infomation form-control"
+                    id="validationCustom02"
+                    required
+                    maxlength="11"
+                    pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
+                    type="text"
+                  />
+                  <span class="placeholder">
+                    Phone number <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please enter your phone number
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <input
+                    class="input-infomation form-control"
+                    type="email"
+                    id="validationCustom03"
+                    required
+                  />
+                  <span class="placeholder">
+                    Email address <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please input valid email ID
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4">
-              <select class="input-infomation">
-                <option>Choose store's province / city</option>
-                <option>Text 1</option>
-                <option>Text 2</option>
-                <option>Text 3</option>
-                <option>Text 4</option>
-              </select>
+            <div class="row pb-4">
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <select
+                    class="selectpicker form-control custom-select"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Text 1</option>
+                    <option value="2">Text 2</option>
+                    <option value="3">Text 3</option>
+                    <option value="4">Text 4</option>
+                  </select>
+                  <span class="placeholder">
+                    Choose your province / city <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose your province
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <select
+                    class="selectpicker form-control custom-select"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Text 1</option>
+                    <option value="2">Text 2</option>
+                    <option value="3">Text 3</option>
+                    <option value="4">Text 4</option>
+                  </select>
+                  <span class="placeholder">
+                    Choose your district <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose your district
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4">
-              <select class="input-infomation">
-                <option>Choose store's district</option>
-                <option>Text 1</option>
-                <option>Text 2</option>
-                <option>Text 3</option>
-                <option>Text 4</option>
-              </select>
+
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <div class="placeholder-wrap">
+                  <input
+                    class="input-infomation form-control"
+                    type="text"
+                    id="validationCustom04"
+                    required
+                  />
+                  <span class="placeholder">
+                    Enter your house number / street name
+                    <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose your house number
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <input
+                  id="upload-photo"
+                  type="file"
+                  class="inputfile"
+                  data-multiple-caption="{count} files selected"
+                  multiple
+                />
+                <label
+                  id="labelInput"
+                  for="upload-photo"
+                  class="label-input-file button"
+                  >Attach your bill
+                  <img src="assets/images/attach-bill.png" alt="attach-bill" />
+                </label>
+              </div>
+            </div>
+
+            <h6 class="text-left text-warranty content pb-4">
+              <span> <img src="assets/images/store.png" alt="store" /></span>
+              Store where you bought
+            </h6>
+
+            <!-- Store where you bought -->
+            <div class="row pb-4">
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <input
+                    class="input-infomation form-control"
+                    type="text"
+                    id="validationCustom05"
+                    required
+                    pattern="[a-zA-Z][a-zA-Z ]{2,}"
+                  />
+                  <span class="placeholder">
+                    Store name <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose your store name
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <select
+                    class="selectpicker form-control custom-select"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Text 1</option>
+                    <option value="2">Text 2</option>
+                    <option value="3">Text 3</option>
+                    <option value="4">Text 4</option>
+                  </select>
+                  <span class="placeholder">
+                    Choose store's province / city <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose store's province
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="placeholder-wrap">
+                  <select
+                    class="selectpicker form-control custom-select"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Text 1</option>
+                    <option value="2">Text 2</option>
+                    <option value="3">Text 3</option>
+                    <option value="4">Text 4</option>
+                  </select>
+                  <span class="placeholder">
+                    Choose store's district <b class="text-danger">*</b>
+                  </span>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please chooose strore's district
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pb-4">
+              <div class="col-lg-12">
+                <textarea class="input-infomation"></textarea>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <div class="form-check">
+                <input
+                  class="form-check-input checkbox"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+                />
+                <label
+                  class="form-check-label text-warranty content pl-2"
+                  for="invalidCheck"
+                >
+                  I agree with
+                  <span class="underline">Warranty Terms</span>
+                  from TOTO
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
             </div>
           </div>
-          <br />
-          <div class="row">
-            <div class="col-lg-12">
-              <textarea class="input-infomation"></textarea>
+          <!-- End fill information -->
+          <div class="container-fluid d-none d-sm-block">
+            <div>
+              <div class="d-flex">
+                <div class="line"></div>
+                <input
+                  type="submit"
+                  value="ACTIVATE WARRANTY"
+                  class="button submit"
+                />
+                <div class="line"></div>
+              </div>
             </div>
           </div>
-          <br />
-          <div class="text-center d-flex flex-row justify-content-center">
-            <input
-              type="checkbox"
-              id="terms"
-              name="terms"
-              value="terms"
-              class="checkbox"
-            />
-            <label for="terms" class="text-warranty content"
-              >I agree with
-              <span class="underline">Warranty Terms</span>
-              from TOTO
-            </label>
-          </div>
-          <br />
-        </div>
-        <!-- End fill information -->
-        <div class="container-fluid d-none d-sm-block">
-          <div>
-            <div class="d-flex">
-              <div class="line"></div>
-              <input
-                type="button"
-                value="ACTIVATE WARRANTY"
-                class="button submit"
-                onclick="console.log('ACTIVATE WARRANTY')"
-              />
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
+        </form>
       </div>
       <!-- CHECK WARRANTY-->
       <div
@@ -342,41 +434,39 @@
       >
         <!-- Container serial -->
         <div
-          class="container-fluid container-serial serial d-flex justify-content-center"
+          class="container-fluid container-serial serial d-flex justify-content-center pb-3"
         >
           <div>
             <div
-              class="d-flex align-content-center flex-wrap justify-content-start"
+              class="d-flex align-content-center flex-wrap justify-content-start pb-3"
             >
               <div>
                 <h5 class="text-warranty text-serial">
                   Enter your serial number
                 </h5>
               </div>
-              <div>
-                <input
-                  class="input-serial"
-                  type="text"
-                  placeholder="Your serial"
-                />
+              <div class="placeholder-wrap-serial">
+                <input class="input-serial" type="text" required />
+                <span class="placeholder">
+                  Your serial <b class="text-danger">*</b>
+                </span>
               </div>
             </div>
-            <br />
+
             <div
               class="d-flex align-content-center flex-wrap justify-content-start"
             >
               <div class="phone-number">
                 <h5 class="text-warranty text-serial">Or your phone number</h5>
               </div>
-              <div class="">
-                <input
-                  class="input-serial"
-                  type="email"
-                  placeholder="Your phone number"
-                />
+              <div class="placeholder-wrap-serial">
+                <input class="input-serial" type="email" required />
+                <span class="placeholder">
+                  Your phone number <b class="text-danger">*</b>
+                </span>
               </div>
             </div>
-            <br />
+
             <div class="row d-flex justify-content-center">
               <h5 class="text-warranty text-serial text-center">
                 Or Scan QR on your product
@@ -395,10 +485,9 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
+
         <!-- End fill information -->
-        <div class="container-fluid d-none d-sm-block">
+        <div class="container-fluid d-none d-sm-block pt-3">
           <div>
             <div class="d-flex">
               <div class="line"></div>
@@ -412,11 +501,9 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
       </div>
       <!-- SERVICE -->
-      <div class="container-service d-none d-sm-block">
+      <div class="container-service d-none d-sm-block py-4">
         <div class="background-service bottom"></div>
         <div class="background-service girl"></div>
         <div class="container-button-service">
@@ -427,11 +514,10 @@
                 value="Call service"
                 class="button-black text-white"
               />
-              <br />
-              <br />
-              <h6 class="text-warranty content">Hotline: 38229520</h6>
-              <br />
-              <h6 class="text-warranty content">
+
+              <h6 class="text-warranty content mt-4">Hotline: 38229520</h6>
+
+              <h6 class="text-warranty content mt-4">
                 Monday - Friday | 08:00 - 17:00
               </h6>
             </div>
@@ -444,9 +530,8 @@
                 value="Live chat on Messenger"
                 class="button"
               />
-              <br />
-              <br />
-              <h6 class="text-warranty content">
+
+              <h6 class="text-warranty content mt-4">
                 Monday - Friday | 08:00 - 17:00
               </h6>
             </div>
@@ -454,19 +539,16 @@
         </div>
       </div>
       <!-- Questions -->
-      <br />
-      <br />
-      <br />
-      <div class="container d-none d-sm-block">
+      <div class="container d-none d-sm-block mt-5">
         <h4 class="text-warranty title text-center text-dark">
           FREQUENTLY ASKED QUESTIONS
         </h4>
-        <br />
+
         <!--Question 1-->
-        <div class="input-infomation d-inline-block">
+        <div class="question d-inline-block">
           <div class="panel panel-default">
             <div
-              class="panel-heading d-flex justify-content-between"
+              class="panel-heading d-flex justify-content-between input-infomation"
               data-target="#collapse1"
               data-toggle="collapse"
             >
@@ -488,10 +570,10 @@
                 />
               </div>
             </div>
-            <br />
+
             <div
               id="collapse1"
-              class="panel-collapse collapse border-bottom border-dark"
+              class="panel-collapse collapse border-bottom border-dark py-4"
             >
               <ul>
                 <li class="text-warranty content">
@@ -507,15 +589,13 @@
                 </li>
               </ul>
             </div>
-            <br />
           </div>
         </div>
-        <br />
         <!--Question 2-->
-        <div class="input-infomation d-inline-block">
+        <div class="question d-inline-block">
           <div class="panel panel-default">
             <div
-              class="panel-heading d-flex justify-content-between"
+              class="panel-heading d-flex justify-content-between input-infomation"
               data-target="#collapse2"
               data-toggle="collapse"
             >
@@ -537,10 +617,10 @@
                 />
               </div>
             </div>
-            <br />
+
             <div
               id="collapse2"
-              class="panel-collapse collapse border-bottom border-dark"
+              class="panel-collapse collapse border-bottom border-dark py-4"
             >
               <ul>
                 <li class="text-warranty content">
@@ -556,15 +636,13 @@
                 </li>
               </ul>
             </div>
-            <br />
           </div>
         </div>
-        <br />
         <!--Question 3-->
-        <div class="input-infomation d-inline-block">
+        <div class="question d-inline-block">
           <div class="panel panel-default">
             <div
-              class="panel-heading d-flex justify-content-between"
+              class="panel-heading d-flex justify-content-between input-infomation"
               data-target="#collapse3"
               data-toggle="collapse"
             >
@@ -586,10 +664,10 @@
                 />
               </div>
             </div>
-            <br />
+
             <div
               id="collapse3"
-              class="panel-collapse collapse border-bottom border-dark"
+              class="panel-collapse collapse border-bottom border-dark py-4"
             >
               <ul>
                 <li class="text-warranty content">
@@ -605,21 +683,42 @@
                 </li>
               </ul>
             </div>
-            <br />
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
-
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-    ></script>
     <script src="test.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
