@@ -24,18 +24,16 @@
     />
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
   </head>
-  <body>
+  <body class="warranty">
     <!-- Header -->
-    <div style="position: relative; min-height: 500px">
+    <div class="background-header-container">
       <div class="background-header right"></div>
       <div class="background-header left"></div>
     </div>
-    <div style="position: absolute; top: 10%; left: 10%">
-      <p class="text-warranty text-banner text-center">
-        Warranty service center
-      </p>
-      <div style="max-width: 630px">
-        <h6 class="text-warranty text-title d-none d-sm-block">
+    <div class="container-banner">
+      <p class="text-warranty banner text-center">Warranty service center</p>
+      <div class="width-content-banner">
+        <h6 class="text-warranty content d-none d-sm-block">
           CLEAN SYNERGY technologies offer a sustainable way to maintain
           sanitary conditions inside your toilet. Since waste does not
           accumulate and create stains, there is less need for manual cleaning
@@ -50,7 +48,7 @@
       <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
         <li class="nav-item d-flex" role="presentation">
           <a
-            class="active text-warranty text-menu menu"
+            class="active text-warranty title menu"
             id="ex1-tab-1"
             data-mdb-toggle="tab"
             href="#ex1-tabs-1"
@@ -62,7 +60,7 @@
         </li>
         <li class="nav-item d-flex" role="presentation">
           <a
-            class="text-warranty text-menu menu"
+            class="text-warranty title menu"
             id="ex1-tab-2"
             data-mdb-toggle="tab"
             href="#ex1-tabs-2"
@@ -78,16 +76,14 @@
     <br />
     <!-- Please enter email -->
     <div class="container text-center">
-      <h6 class="text-warranty text-title">
+      <h6 class="text-warranty content">
         Please
-        <span style="color: #3088ce"
-          >enter your Serial and fill information
-        </span>
+        <span class="tufts-blue">enter your Serial and fill information </span>
         or
-        <span style="color: #3088ce">Scan QR code</span> to check for your
-        warranty of activated product.
+        <span class="tufts-blue">Scan QR code</span> to check for your warranty
+        of activated product.
       </h6>
-      <h6 class="text-warranty text-title" style="text-decoration: underline">
+      <h6 class="text-warranty content underline">
         Where to find Serial / QR?
       </h6>
     </div>
@@ -103,17 +99,19 @@
         aria-labelledby="ex1-tab-1"
       >
         <!-- Container serial -->
-        <div class="container-fluid serial d-flex justify-content-center">
+        <div
+          class="container-fluid container-serial d-flex justify-content-center"
+        >
           <div>
             <div
-              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+              class="d-flex align-content-center flex-wrap justify-content-start"
             >
-              <div style="padding: 3px 10px">
+              <div>
                 <h5 class="text-warranty text-serial">
                   Enter your serial number
                 </h5>
               </div>
-              <div class="">
+              <div>
                 <input
                   class="input-serial"
                   type="text"
@@ -127,6 +125,7 @@
                 Or Scan QR on your product
                 <a
                   id="btn-scan-qr"
+                  class="btn-scan-qr"
                   data-toggle="modal"
                   data-target="#exampleModalCenter"
                 >
@@ -164,9 +163,9 @@
                 </button>
               </div>
               <div class="modal-body text-center">
-                <canvas hidden="" id="qr-canvas"></canvas>
+                <canvas hidden="" id="qr-canvas" class="qr-canvas"></canvas>
 
-                <div id="qr-result" hidden="">
+                <div id="qr-result" class="qr-result" hidden="">
                   <b>Data:</b> <span id="outputData"></span>
                 </div>
               </div>
@@ -175,13 +174,13 @@
         </div>
         <!-- Fill your warranty information -->
         <div class="container">
-          <h4 class="text-center text-warranty text-menu" style="color: #000">
+          <h4 id="fillInfor" class="text-center text-warranty title text-dark">
             FILL YOUR WARRANTY INFORMATION
           </h4>
           <br />
           <br />
           <!-- Customer information-->
-          <h6 class="text-left text-warranty text-title">
+          <h6 class="text-left text-warranty content">
             <span>
               <img src="assets/images/customer.png" alt="customer"
             /></span>
@@ -248,29 +247,18 @@
                 class="inputfile"
                 data-multiple-caption="{count} files selected"
                 multiple
-                style="opacity: 0; position: absolute; z-index: -1"
               />
               <label
                 id="labelInput"
                 for="upload-photo"
-                style="
-                  cursor: pointer;
-                  border: 1px solid black;
-                  text-align: center;
-                  width: 100%;
-                "
-                class="button-attach"
+                class="label-input-file button"
                 >Attach your bill
-                <img
-                  src="assets/images/attach-bill.png"
-                  alt="attach-bill"
-                  style="width: 14px; height: 19px; margin: 0 5px"
-                />
+                <img src="assets/images/attach-bill.png" alt="attach-bill" />
               </label>
             </div>
           </div>
           <br />
-          <h6 class="text-left text-warranty text-title">
+          <h6 class="text-left text-warranty content">
             <span> <img src="assets/images/store.png" alt="store" /></span>
             Store where you bought
           </h6>
@@ -307,29 +295,21 @@
           <br />
           <div class="row">
             <div class="col-lg-12">
-              <textarea
-                class="input-infomation"
-                style="height: 120px"
-              ></textarea>
+              <textarea class="input-infomation"></textarea>
             </div>
           </div>
           <br />
           <div class="text-center d-flex flex-row justify-content-center">
             <input
               type="checkbox"
-              id="vehicle1"
-              name="vehicle1"
-              value="Bike"
-              style="
-                width: 18px;
-                height: 18px;
-                margin-top: 5px;
-                margin-right: 10px;
-              "
+              id="terms"
+              name="terms"
+              value="terms"
+              class="checkbox"
             />
-            <label for="vehicle1" class="text-warranty text-title"
+            <label for="terms" class="text-warranty content"
               >I agree with
-              <span style="text-decoration: underline">Warranty Terms</span>
+              <span class="underline">Warranty Terms</span>
               from TOTO
             </label>
           </div>
@@ -342,10 +322,8 @@
               <div class="line"></div>
               <input
                 type="button"
-                readonly
                 value="ACTIVATE WARRANTY"
-                class="button-attach"
-                style="margin: 15px 15px 0px; text-align: center"
+                class="button submit"
                 onclick="console.log('ACTIVATE WARRANTY')"
               />
               <div class="line"></div>
@@ -363,17 +341,19 @@
         aria-labelledby="ex1-tab-2"
       >
         <!-- Container serial -->
-        <div class="container-fluid serial d-flex justify-content-center">
+        <div
+          class="container-fluid container-serial serial d-flex justify-content-center"
+        >
           <div>
             <div
-              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+              class="d-flex align-content-center flex-wrap justify-content-start"
             >
-              <div style="padding: 3px 15px">
+              <div>
                 <h5 class="text-warranty text-serial">
                   Enter your serial number
                 </h5>
               </div>
-              <div class="">
+              <div>
                 <input
                   class="input-serial"
                   type="text"
@@ -383,9 +363,9 @@
             </div>
             <br />
             <div
-              class="d-flex align-content-center flex-wrap justify-content-start serial-input"
+              class="d-flex align-content-center flex-wrap justify-content-start"
             >
-              <div style="padding: 3px 15px; padding-right: 35px">
+              <div class="phone-number">
                 <h5 class="text-warranty text-serial">Or your phone number</h5>
               </div>
               <div class="">
@@ -400,6 +380,17 @@
             <div class="row d-flex justify-content-center">
               <h5 class="text-warranty text-serial text-center">
                 Or Scan QR on your product
+                <a
+                  id="btn-scan-qr"
+                  class="btn-scan-qr"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                  <img
+                    src="https://uploads.sitepoint.com/wp-content/uploads/2017/07/1499401426qr_icon.svg"
+                    alt="qr-code"
+                  />
+                </a>
               </h5>
             </div>
           </div>
@@ -413,10 +404,8 @@
               <div class="line"></div>
               <input
                 type="button"
-                readonly
                 value="CHECK WARRANTY"
-                class="button-attach"
-                style="margin: 15px 15px 0px; text-align: center"
+                class="button submit"
                 onclick="console.log('CHECK WARRANTY')"
               />
               <div class="line"></div>
@@ -427,41 +416,37 @@
         <br />
       </div>
       <!-- SERVICE -->
-      <div
-        style="position: relative; min-height: 670px"
-        class="d-none d-sm-block"
-      >
+      <div class="container-service d-none d-sm-block">
         <div class="background-service bottom"></div>
-        <div class="background-service top"></div>
-        <div style="position: absolute; top: 140px; left: 401px">
+        <div class="background-service girl"></div>
+        <div class="container-button-service">
           <div class="d-flex">
             <div class="text-center">
               <input
                 type="submit"
                 value="Call service"
-                class="button-attach"
-                style="background-color: #000; color: #fff"
+                class="button-black text-white"
               />
               <br />
               <br />
-              <h6 class="text-warranty text-title">Hotline: 38229520</h6>
+              <h6 class="text-warranty content">Hotline: 38229520</h6>
               <br />
-              <h6 class="text-warranty text-title">
+              <h6 class="text-warranty content">
                 Monday - Friday | 08:00 - 17:00
               </h6>
             </div>
             <div class="p-4 m-2 d-flex align-items-center">
-              <h6 class="text-warranty text-title">Or</h6>
+              <h6 class="text-warranty content">Or</h6>
             </div>
             <div class="">
               <input
                 type="submit"
                 value="Live chat on Messenger"
-                class="button-attach"
+                class="button"
               />
               <br />
               <br />
-              <h6 class="text-warranty text-title">
+              <h6 class="text-warranty content">
                 Monday - Friday | 08:00 - 17:00
               </h6>
             </div>
@@ -473,12 +458,12 @@
       <br />
       <br />
       <div class="container d-none d-sm-block">
-        <h4 class="text-warranty text-menu text-center" style="color: #000">
+        <h4 class="text-warranty title text-center text-dark">
           FREQUENTLY ASKED QUESTIONS
         </h4>
         <br />
         <!--Question 1-->
-        <div class="input-infomation" style="display: inline-block">
+        <div class="input-infomation d-inline-block">
           <div class="panel panel-default">
             <div
               class="panel-heading d-flex justify-content-between"
@@ -493,31 +478,30 @@
                   id="collapsedown"
                   src="assets/images/collapse-down.png"
                   alt="down"
-                  class="collapse-question"
+                  class="collapse-question down"
                 />
                 <img
                   id="collapseup"
                   src="assets/images/collapse-up.png"
                   alt="up"
-                  class="collapse-question"
+                  class="collapse-question up"
                 />
               </div>
             </div>
             <br />
             <div
               id="collapse1"
-              class="collapse"
-              style="border-bottom: 1px solid #000"
+              class="panel-collapse collapse border-bottom border-dark"
             >
               <ul>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Actively confirm whether the product is genuine or not
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   An important basis for Minh Long to have information and
                   support customers in the best way
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Customers enjoy full product warranty benefits, helping to
                   feel more secure during use.
                 </li>
@@ -528,7 +512,7 @@
         </div>
         <br />
         <!--Question 2-->
-        <div class="input-infomation" style="display: inline-block">
+        <div class="input-infomation d-inline-block">
           <div class="panel panel-default">
             <div
               class="panel-heading d-flex justify-content-between"
@@ -543,31 +527,30 @@
                   id="collapsedown"
                   src="assets/images/collapse-down.png"
                   alt="down"
-                  class="collapse-question"
+                  class="collapse-question down"
                 />
                 <img
                   id="collapseup"
                   src="assets/images/collapse-up.png"
                   alt="up"
-                  class="collapse-question"
+                  class="collapse-question up"
                 />
               </div>
             </div>
             <br />
             <div
               id="collapse2"
-              class="panel-collapse collapse"
-              style="border-bottom: 1px solid #000"
+              class="panel-collapse collapse border-bottom border-dark"
             >
               <ul>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Actively confirm whether the product is genuine or not
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   An important basis for Minh Long to have information and
                   support customers in the best way
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Customers enjoy full product warranty benefits, helping to
                   feel more secure during use.
                 </li>
@@ -578,7 +561,7 @@
         </div>
         <br />
         <!--Question 3-->
-        <div class="input-infomation" style="display: inline-block">
+        <div class="input-infomation d-inline-block">
           <div class="panel panel-default">
             <div
               class="panel-heading d-flex justify-content-between"
@@ -593,31 +576,30 @@
                   id="collapsedown"
                   src="assets/images/collapse-down.png"
                   alt="down"
-                  class="collapse-question"
+                  class="collapse-question down"
                 />
                 <img
                   id="collapseup"
                   src="assets/images/collapse-up.png"
                   alt="up"
-                  class="collapse-question"
+                  class="collapse-question up"
                 />
               </div>
             </div>
             <br />
             <div
               id="collapse3"
-              class="panel-collapse collapse"
-              style="border-bottom: 1px solid #000"
+              class="panel-collapse collapse border-bottom border-dark"
             >
               <ul>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Actively confirm whether the product is genuine or not
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   An important basis for Minh Long to have information and
                   support customers in the best way
                 </li>
-                <li class="text-warranty text-title">
+                <li class="text-warranty content">
                   Customers enjoy full product warranty benefits, helping to
                   feel more secure during use.
                 </li>
@@ -633,7 +615,6 @@
       <br />
     </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       type="text/javascript"

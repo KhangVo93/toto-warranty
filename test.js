@@ -25,6 +25,11 @@ Array.prototype.forEach.call(inputs, function (input) {
     } else label.innerHTML = labelVal;
   });
 });
+if ($("body").width() < 600) {
+  $("#fillInfor").removeClass("title").addClass("content");
+} else {
+  $("#fillInfor").removeClass("content").addClass("title");
+}
 /////////////////////////////////////////////////////////
 
 var qrcode = window.qrcode;
@@ -50,22 +55,24 @@ qrcode.callback = function (res) {
 };
 
 btnScanQR.onclick = function () {
-  navigator.mediaDevices.getUserMedia({
-    video: {
-      facingMode: "environment"
-    }
-  }).then(function (stream) {
-    scanning = true;
-    qrResult.hidden = true;
-    btnScanQR.hidden = true;
-    canvasElement.hidden = false;
-    video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+  navigator.mediaDevices
+    .getUserMedia({
+      video: {
+        facingMode: "environment",
+      },
+    })
+    .then(function (stream) {
+      scanning = true;
+      qrResult.hidden = true;
+      btnScanQR.hidden = true;
+      canvasElement.hidden = false;
+      video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
 
-    video.srcObject = stream;
-    video.play();
-    tick();
-    scan();
-  });
+      video.srcObject = stream;
+      video.play();
+      tick();
+      scan();
+    });
 };
 
 function tick() {
